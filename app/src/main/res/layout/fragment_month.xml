@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/month_calendar_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_navigation" />
+
+    <ImageView
+        android:id="@+id/month_agenda_button"
+        android:layout_width="@dimen/normal_icon_size"
+        android:layout_height="@dimen/normal_icon_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/top_left_arrow"
+        android:layout_alignBottom="@+id/top_right_arrow"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/agenda_view"
+        android:padding="@dimen/small_margin"
+        android:src="@drawable/ic_change_view_vector" />
+
+    <org.fossify.calendar.views.MonthViewWrapper
+        android:id="@+id/month_view_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_left_arrow" />
+
+</RelativeLayout>
